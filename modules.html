@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modules - Marketing Campaign Planner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function openModule(module) {
+            const urls = {
+                'Client Management': 'client-management.html',
+                'Campaign Scheduling': 'campaign-scheduling.html',
+                'Budget Management': 'budget-management.html',
+                'Analytics & Reporting': 'analytics-reporting.html',
+                'Resource Management': 'resource-management.html',
+                'Team Management': 'team-management.html'
+            };
+            
+            if (urls[module]) {
+                window.open(urls[module], '_blank');
+            } else {
+                alert("Page not found for " + module);
+            }
+        }
+    </script>
+<style>
+    body {
+        font-family: "Times New Roman", Times, serif;
+    }
+</style>
+
+</head>
+<body class="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 min-h-screen flex flex-col">
+    <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
+<nav class="bg-gradient-to-r from-indigo-500 to-purple-600 p-4 shadow-lg flex items-center">
+    <!-- Logo on the left -->
+    <img src="logo.png" alt="Digital Marketing Campaign Planner" class="h-12 w-auto mr-4">
+
+    <!-- Navigation Links -->
+    <div class="text-white text-2xl font-bold">Digital Marketing Planner</div>
+    <div class="ml-auto space-x-6">
+        <a href="index.html" class="text-white hover:text-gray-300 transition">Home</a>
+        <a href="about.html" class="text-white hover:text-gray-300 transition">About Us</a>
+        <a href="modules.html" class="text-white hover:text-gray-300 transition">Modules</a>
+        <a href="contact.html" class="text-white hover:text-gray-300 transition">Contact Us</a>
+    </div>
+</nav>
+
+    <!-- Modules Content -->
+    <div class="container mx-auto p-10 text-center">
+        <h1 class="text-5xl font-extrabold text-indigo-800 drop-shadow-lg">Modules</h1>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            <div class="bg-white p-6 rounded-lg shadow-xl border-l-8 border-blue-500">
+                <h2 class="text-2xl font-semibold mb-2 text-blue-700">Client Management</h2>
+                <button onclick="openModule('Client Management')" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg shadow-md w-full sm:w-auto transition transform hover:scale-105">View</button>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-xl border-l-8 border-green-500">
+                <h2 class="text-2xl font-semibold mb-2 text-green-700">Campaign Scheduling</h2>
+                <button onclick="openModule('Campaign Scheduling')" class="mt-4 bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-lg shadow-md w-full sm:w-auto transition transform hover:scale-105">View</button>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-xl border-l-8 border-yellow-500">
+                <h2 class="text-2xl font-semibold mb-2 text-yellow-700">Budget Management</h2>
+                <button onclick="openModule('Budget Management')" class="mt-4 bg-yellow-600 hover:bg-yellow-700 text-white px-5 py-2 rounded-lg shadow-md w-full sm:w-auto transition transform hover:scale-105">View</button>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-xl border-l-8 border-red-500">
+                <h2 class="text-2xl font-semibold mb-2 text-red-700">Analytics & Reporting</h2>
+                <button onclick="openModule('Analytics & Reporting')" class="mt-4 bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-lg shadow-md w-full sm:w-auto transition transform hover:scale-105">View</button>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-xl border-l-8 border-purple-500">
+                <h2 class="text-2xl font-semibold mb-2 text-purple-700">Resource Management</h2>
+                <button onclick="openModule('Resource Management')" class="mt-4 bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-lg shadow-md w-full sm:w-auto transition transform hover:scale-105">View</button>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-xl border-l-8 border-pink-500">
+                <h2 class="text-2xl font-semibold mb-2 text-pink-700">Team Management</h2>
+                <button onclick="openModule('Team Management')" class="mt-4 bg-pink-600 hover:bg-pink-700 text-white px-5 py-2 rounded-lg shadow-md w-full sm:w-auto transition transform hover:scale-105">View</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center p-4 mt-auto">
+        <p>&copy; 2025 Digital Marketing Campaign Planner. All rights reserved.</p>
+    </footer>
+</body>
+</html>
